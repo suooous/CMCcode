@@ -85,7 +85,6 @@ print(newdata)
 # 计算得分并归一化
 result = score(1,4,newdata)
 result = normalization(result)
-#rank = [dict(newdata[i,0],result[i])  for i in range(len(newdata))]
 rank = [[k,v] for k, v in zip(newdata[:,0], result)]
 rank = sorted(rank, key=lambda x: x[1], reverse=True)
 print(rank)
